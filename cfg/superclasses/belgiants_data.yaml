@@ -1,0 +1,6 @@
+train: ./images/train/
+val: ./images/valid/
+test: ./images/test/
+
+nc: 13
+names: ["undefined_sign", "other_defined", "triangle", "redcircle", "bluecircle", "redbluecircle", 'diamond', 'inv_triangle', 'stop', 'forbidden', 'square', 'rectangleup', 'rectangledown']

@@ -1,0 +1,31 @@
+Fusing layers... 
+RepConv.fuse_repvgg_block
+RepConv.fuse_repvgg_block
+RepConv.fuse_repvgg_block
+IDetect.fuse
+/home/gero/.local/lib/python3.9/site-packages/torch/functional.py:478: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at  ../aten/src/ATen/native/TensorShape.cpp:2894.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+Model Summary: 314 layers, 36546500 parameters, 6194944 gradients, 103.4 GFLOPS
+ Convert model to Traced-model... 
+ traced_script_module saved! 
+ model is traced! 
+
+test: Scanning 'images/test' images and labels... 1843 found, 0 missing, 292 empty, 0 corrupted: 100%|█████████| 1843/1843 [00:16<00:00, 109.94it/s]
+test: New cache created: images/test.cache
+               Class      Images      Labels           P           R      mAP@.5  mAP@.5:.95:
+                 all        1843        2288       0.692       0.851       0.813       0.568
+      undefined_sign        1843         468       0.596       0.459       0.556       0.351
+       other_defined        1843         422       0.639       0.628       0.641       0.405
+            triangle        1843         291        0.82       0.973       0.941       0.682
+           redcircle        1843         403       0.774       0.938       0.883       0.643
+          bluecircle        1843         287       0.706       0.944       0.832        0.55
+       redbluecircle        1843          33       0.804       0.909       0.845       0.623
+             diamond        1843          58        0.78       0.862       0.862       0.523
+        inv_triangle        1843          99       0.681       0.969       0.853       0.528
+                stop        1843          24       0.725       0.658         0.8       0.544
+           forbidden        1843          34       0.676       0.941       0.912        0.71
+              square        1843          59       0.573       0.983       0.727       0.563
+         rectangleup        1843         110       0.526       0.945       0.899       0.694
+Speed: 38.0/0.7/38.7 ms inference/NMS/total per 640x640 image at batch-size 32
+Results saved to runs/test/yolo_belgiants
+/mnt/HDD/BelgianTSDetection ❯                       
